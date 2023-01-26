@@ -33,7 +33,7 @@ const superheroArray = [
         specialAbility: "spidey senses are tingling...",
         specialAbilityDamage: 400,
         signatureMove: "web right to the face!",
-        signatureMoveDamage: 150
+        signatureMoveDamage: 120
     },
     {
         name: "The Hulk",
@@ -51,9 +51,8 @@ const superheroArray = [
         specialAbility: "superhuman speed!",
         specialAbilityDamage: 400,
         signatureMove: "here comes a claw!",
-        signatureMoveDamage: 200
-    },
-    
-
-    
+        signatureMoveDamage: 150
+    },  
 ]
+
+export default superheroArray;
