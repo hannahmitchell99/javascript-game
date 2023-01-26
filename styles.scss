@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Permanent+Marker&display=swap');
+
+$font-heading: 'Permanent Marker', cursive;
+$font-main: 'Didact Gothic', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: 0;
+}
+
+header{
+    text-align: center;
+    height: 10rem;
+    background-color: black;
+    font-family:$font-heading;
+    color:white;
+}
+
+
