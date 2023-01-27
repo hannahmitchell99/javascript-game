@@ -1,4 +1,4 @@
-const superheroArray = [
+export const superHeroArray = [
     {
         name: "Harley Quinn",
         health: 2000,
@@ -55,4 +55,4 @@ const superheroArray = [
     },  
 ]
 
-export default superheroArray;
+export default superHeroArray;
