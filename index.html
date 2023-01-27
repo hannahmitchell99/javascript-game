@@ -11,17 +11,26 @@
 
 <body>
     <header class="header">
-        <h1>Superhero Smackdown!</h1>
+        <h1>Superhero Smackdown!👊</h1>
         <h2>Let's fight!</h2>
     </header>
+    <div class="pick-player">
+        <label for="player-choice">Choose Your Hero!</label>
+        <select name="player-choice" id="player-choice">
+            <option value="Harley Quinn">Harley Quinn</option>
+            <option value="Storm">Storm</option>
+            <option value="Wonder Woman">Wonder Woman</option>
+            <option value="Spider Man">Spider Man</option>
+            <option value="The Hulk">The Hulk</option>
+            <option value="Wolverine">Wolverine</option>
+        </select>
+    </div>
     <div class="game-container">
-        <div class="player-card">
+        <div class="game-container__player-card">
             <div class="player-heading">
-                <h3>Superhero name</h3>
+                <h3 class="player-heading__name">Superhero name</h3>
             </div>
-            <img class="player-sprite"
-                src="https://spng.pngfind.com/pngs/s/349-3494262_colors-download-settings-chibi-harley-quinn-gif-hd.png"
-                alt="">
+            <img class="player-sprite" src="" alt="">
             <div class="player-abilities">
                 <h4>Health:</h4>
                 <h4>Special Ability:</h4>
@@ -30,17 +39,15 @@
                 <button id="signature-move-button">Signature Move</button>
             </div>
         </div>
-        <div class="display">
+        <div class="game-container__display">
             <h2>You Chose:</h2>
             <h2>Opponent Chose: </h2>
         </div>
-        <div class="opponent-card">
+        <div class="game-container__opponent-card">
             <div class="opponent-heading">
-                <h3>Superhero name</h3>
+                <h3 class="opponent-heading__name">Superhero name</h3>
             </div>
-            <img class="opponent-sprite"
-                src="https://spng.pngfind.com/pngs/s/349-3494262_colors-download-settings-chibi-harley-quinn-gif-hd.png"
-                alt="">
+            <img class="opponent-sprite" src="" alt="">
             <div class="opponent-abilities">
                 <h4>Health:</h4>
                 <h4>Special Ability:</h4>
