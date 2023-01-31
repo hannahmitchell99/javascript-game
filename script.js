@@ -58,7 +58,7 @@ const playerSelectMove = (event) =>{
 
 //computer move
 const computerSelectMove = () =>{
-  const random = Math.floor(Math.random())
+  const random = Math.floor(Math.random()*2)
   if(random ===0){
     let computerMove = computerHero.specialAbilityDamage
     console.log(computerMove)
