@@ -84,11 +84,11 @@ const calculatePlayerHealth = () =>{
     console.log(currentPlayerHealth)
     return currentPlayerHealth
   } else if (computerMove === computerHero.signatureMove) {
-    let computerDamage = computerHero.signatureMoveDamage
+    let computerDamage = computerHero.signatureMoveDamage;
     currentPlayerHealth -= computerDamage
     console.log(currentPlayerHealth)
     return currentPlayerHealth
-  }
+  } 
 
  }
 
@@ -129,10 +129,10 @@ oppCard.innerHTML = oppCardHTML;
 // display move choice
 
 const displayMoveChoice = (computerMove, playerMove, currentPlayerHealth) => {
+ 
   const displayHTML = `<h2>You Chose: ${playerMove} </h2>
  <h2>Opponent Chose: ${computerMove} </h2>
- <h2> You took x damage!</h2>
- <h2> Your health is ${currentPlayerHealth}</h2>
+ <h2> Your health is ${userHero.health + currentPlayerHealth}!</h2>
  <h2> Opponent took x damage!</h2>
  <h2>Their health is </h2>`;
  gameDisplay.innerHTML = displayHTML
