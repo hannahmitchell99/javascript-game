@@ -10,7 +10,7 @@ const selectPlayerButtons = document.querySelectorAll(".superhero");
 const playButton = document.querySelector(".play");
 const specialAbilityButton = document.querySelector("#special-ability-button");
 const signatureMoveButton = document.querySelector("#signature-move-button");
-const healthContainer = document.querySelector(".game-container__health");
+
 
 let userHero = "hello";
 let computerHero = "hi";
@@ -137,7 +137,7 @@ const displayOpponent = (superHeroObject) => {
   oppCard.innerHTML = oppCardHTML;
 };
 
-// display move choice
+// display move choice, calculate and display health + winners
 
 const displayMoveChoice = (
   computerMove,
@@ -162,6 +162,13 @@ const displayMoveChoice = (
   }
    
   };
+
+// refresh function
+
+const refreshPage = () => {
+  window.location.reload();
+}
+
 
 // Events
 
@@ -199,3 +206,5 @@ specialAbilityButton.addEventListener("click", () =>
     currentComputerDamage
   )
 );
+
+newGameButton.addEventListener('click', refreshPage)
