@@ -7,7 +7,7 @@
 
 .header {
   height: 10rem;
-  background-color: #ed542d;
+  background-color: #0077b6;
   font-family: "VT323", monospace;
   color: white;
   display: grid;
@@ -31,7 +31,7 @@
 }
 
 .pick-player {
-  border: 2px solid red;
+  background-color: #d9effa;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -41,6 +41,7 @@
 .pick-player__heading {
   grid-area: heading;
   font-family: "VT323", monospace;
+  font-size: 1.5rem;
   justify-self: center;
   align-self: center;
 }
@@ -64,6 +65,8 @@
 }
 .pick-player .play {
   grid-area: play;
+  justify-self: center;
+  align-self: center;
 }
 
 .superhero {
@@ -85,7 +88,30 @@
 
 .superhero:hover {
   transform: translateY(-2px);
-  background-color: #d62828;
+  background-color: #d60909;
   color: #ffffff;
   border: solid 2px #ff0606;
+}
+
+.play {
+  font-family: "Koulen", cursive;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background-color: #0077b6;
+  padding: 10px 30px;
+  border: solid rgba(0, 118, 182, 0.7529411765) 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.play:hover {
+  padding: 10px 24px;
+  transform: translateY(-2px);
+  background-color: rgba(0, 149, 199, 0.5921568627);
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
