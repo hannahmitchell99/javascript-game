@@ -113,9 +113,9 @@ const displaySelectedSuperhero = (superHeroObject) => {
    </div>
    <img class="player-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
    <div class="player-abilities">
-       <h4>Original Health:${superHeroObject.health}</h4>
-       <h4>Special Ability:${superHeroObject.specialAbility}</h4>
-       <h4>Signature Move:${superHeroObject.signatureMove}</h4>
+       <h4>Your starting health is: ${superHeroObject.health}</h4>
+       <h4>Your special ability is: ${superHeroObject.specialAbility}</h4>
+       <h4>Your signature move is: ${superHeroObject.signatureMove}</h4>
    </div>
 `;
   playerCard.innerHTML = playerCardHTML;
@@ -129,9 +129,9 @@ const displayOpponent = (superHeroObject) => {
    </div>
    <img class="opponent-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
    <div class="opponent-abilities">
-       <h4>Original Health:${superHeroObject.health}</h4>
-       <h4>Special Ability:${superHeroObject.specialAbility}</h4>
-       <h4>Signature Move:${superHeroObject.signatureMove}</h4>
+       <h4>Their starting health is: ${superHeroObject.health}</h4>
+       <h4>Their special ability is: ${superHeroObject.specialAbility}</h4>
+       <h4>Their signature move is: ${superHeroObject.signatureMove}</h4>
    </div>
 `;
   oppCard.innerHTML = oppCardHTML;
