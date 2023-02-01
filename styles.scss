@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand&family=VT323&display=swap');
 
 $font-heading: "VT323", monospace;
 $font-main: "Koulen", cursive;
+$font-card: 'Quicksand', sans-serif;
 * {
   margin: 0;
   padding: 0;
@@ -104,6 +105,73 @@ $font-main: "Koulen", cursive;
     grid-area: signature-move;
   }
 }
+
+.game-container__player-card {
+  width:50%;
+//   border: #d62828 2px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas:
+    "heading heading heading"
+    "sprite sprite sprite"
+    "abilities abilities abilities";
+  .player-heading {
+    justify-self: center;
+    grid-area: heading;
+  }
+  .player-sprite {
+    grid-area: sprite;
+    min-width: 60%;
+    max-width: 60%;
+    height:auto;
+  }
+  .player-abilities {
+    grid-area: abilities;
+    font-family: $font-heading;
+    font-weight: 50;
+  }
+}
+.player-heading{
+    &__name{
+        font-family: $font-heading;
+        font-size: 1.5rem;
+    }
+}
+
+.game-container__opponent-card{
+    width:50%;
+    //   border: #d62828 2px solid;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.25fr 1fr 0.25fr;
+      grid-template-areas:
+        "heading heading heading"
+        "sprite sprite sprite"
+        "abilities abilities abilities";
+      .opponent-heading {
+        justify-self: center;
+        grid-area: heading;
+      }
+      .opponent-sprite {
+        grid-area: sprite;
+        min-width: 60%;
+        max-width: 60%;
+        height:auto;
+      }
+      .opponent-abilities {
+        grid-area: abilities;
+        font-family: $font-heading;
+        font-weight: 50;
+      }
+    }
+    .opponent-heading{
+        &__name{
+            font-family: $font-heading;
+            font-size: 1.5rem;
+        }
+}
+
 .superhero {
   font-family: $font-main;
   font-size: 14px;
@@ -167,5 +235,10 @@ $font-main: "Koulen", cursive;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
 
+.choose-move__special:hover,
+.choose-move__signature:hover {
+  transform: translateY(-2px);
+  background-color: #f8832a;
 }

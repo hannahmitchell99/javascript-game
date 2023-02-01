@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand&family=VT323&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -91,6 +91,62 @@
   grid-area: signature-move;
 }
 
+.game-container__player-card {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas: "heading heading heading" "sprite sprite sprite" "abilities abilities abilities";
+}
+.game-container__player-card .player-heading {
+  justify-self: center;
+  grid-area: heading;
+}
+.game-container__player-card .player-sprite {
+  grid-area: sprite;
+  min-width: 60%;
+  max-width: 60%;
+  height: auto;
+}
+.game-container__player-card .player-abilities {
+  grid-area: abilities;
+  font-family: "VT323", monospace;
+  font-weight: 50;
+}
+
+.player-heading__name {
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+}
+
+.game-container__opponent-card {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas: "heading heading heading" "sprite sprite sprite" "abilities abilities abilities";
+}
+.game-container__opponent-card .opponent-heading {
+  justify-self: center;
+  grid-area: heading;
+}
+.game-container__opponent-card .opponent-sprite {
+  grid-area: sprite;
+  min-width: 60%;
+  max-width: 60%;
+  height: auto;
+}
+.game-container__opponent-card .opponent-abilities {
+  grid-area: abilities;
+  font-family: "VT323", monospace;
+  font-weight: 50;
+}
+
+.opponent-heading__name {
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+}
+
 .superhero {
   font-family: "Koulen", cursive;
   font-size: 14px;
@@ -153,4 +209,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.choose-move__special:hover,
+.choose-move__signature:hover {
+  transform: translateY(-2px);
+  background-color: #f8832a;
 }/*# sourceMappingURL=styles.css.map */
