@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 6px;
+  gap: 7px;
   grid-template-areas: "heading heading heading" "hq storm ww" "hulk spiderman wolverine" "play play play";
 }
 .pick-player__heading {
@@ -67,6 +67,28 @@
   grid-area: play;
   justify-self: center;
   align-self: center;
+}
+
+.choose-move {
+  background-color: #b3dbef;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  grid-template-areas: "heading heading heading heading" "special-ability special-ability signature-move signature-move";
+}
+.choose-move__heading {
+  grid-area: heading;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: center;
+}
+.choose-move__special {
+  grid-area: special-ability;
+}
+.choose-move__signature {
+  grid-area: signature-move;
 }
 
 .superhero {
@@ -114,4 +136,21 @@
   transform: translateY(-2px);
   background-color: rgba(0, 149, 199, 0.5921568627);
   color: #ffffff;
+}
+
+.choose-move__special,
+.choose-move__signature {
+  font-family: "Koulen", cursive;
+  font-size: 14px;
+  color: #fff;
+  padding: 2px;
+  width: 60%;
+  background-color: #ff9a4d;
+  border: solid #e76f51 2px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */

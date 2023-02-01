@@ -38,11 +38,11 @@ $font-main: "Koulen", cursive;
 }
 
 .pick-player {
-    background-color: #d9effa;
+  background-color: #d9effa;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 6px;
+  gap: 7px;
   grid-template-areas:
     "heading heading heading"
     "hq storm ww"
@@ -80,7 +80,30 @@ $font-main: "Koulen", cursive;
     align-self: center;
   }
 }
+.choose-move {
+  background-color: #b3dbef;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  grid-template-areas:
+    "heading heading heading heading"
+    "special-ability special-ability signature-move signature-move";
 
+  &__heading {
+    grid-area: heading;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  &__special {
+    grid-area: special-ability;
+  }
+  &__signature {
+    grid-area: signature-move;
+  }
+}
 .superhero {
   font-family: $font-main;
   font-size: 14px;
@@ -119,7 +142,6 @@ $font-main: "Koulen", cursive;
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .play:hover {
@@ -127,4 +149,23 @@ $font-main: "Koulen", cursive;
   transform: translateY(-2px);
   background-color: #0095c797;
   color: #ffffff;
+}
+
+.choose-move__special,
+.choose-move__signature {
+  font-family: $font-main;
+  font-size: 14px;
+  color: #fff;
+  padding: 2px;
+  width: 60%;
+  background-color: #ff9a4d;
+  border: solid #e76f51 2px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
 }
