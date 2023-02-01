@@ -17,6 +17,7 @@ let computerHero = "hi";
 let playerMove = "playermove";
 let computerMove = "computer move";
 let currentPlayerHealth = 0;
+let currentComputerDamage = 0;
 
 
 // Functions
@@ -89,9 +90,22 @@ const calculatePlayerHealth = () =>{
     console.log(currentPlayerHealth)
     return currentPlayerHealth
   } 
-
  }
 
+
+ const calculateOpponentHealth = () =>{
+  if (playerMove === userHero.specialAbility){
+    let userDamage = userHero.specialAbilityDamage;
+    currentComputerDamage -= userDamage
+    console.log(currentComputerDamage)
+    return currentComputerDamage
+  } else if (playerMove === userHero.signatureMove) {
+    let userDamage = userHero.signatureMoveDamage;
+    currentComputerDamage -= userDamage
+    console.log(currentComputerDamage)
+    return currentComputerDamage
+  } 
+ }
 //Display Functions
 
 // display selected superhero
@@ -128,37 +142,15 @@ oppCard.innerHTML = oppCardHTML;
 
 // display move choice
 
-const displayMoveChoice = (computerMove, playerMove, currentPlayerHealth) => {
+const displayMoveChoice = (computerMove, playerMove, currentPlayerHealth, currentComputerDamage) => {
  
   const displayHTML = `<h2>You Chose: ${playerMove} </h2>
  <h2>Opponent Chose: ${computerMove} </h2>
  <h2> Your health is ${userHero.health + currentPlayerHealth}!</h2>
- <h2> Opponent took x damage!</h2>
- <h2>Their health is </h2>`;
+ <h2>Opponent health is ${computerHero.health +currentComputerDamage}!</h2>`;
  gameDisplay.innerHTML = displayHTML
 
 };
-
-
-
-// const displayPlayerChoice = () => {
-
-//   if (displayPlayerC
-//   const displayHTML = `<h2>You Chose: ${playerMove} </h2>
-//   <h2> Opponent took x damage!</h2>`
-//   return gameDisplay.innerHTML =displayOpponent
-  
-// }
-
-// display player health
-
-const displayPlayerHealth=()=>{
-  const displayHTML = `
- <h2> You took x damage!</h2>
- <h2> Your health is ${currentPlayerHealth}</h2>`
-
- return healthContainer.innerHTML = displayHTML
-}
 
 
 // Events
@@ -174,11 +166,12 @@ playButton.addEventListener("click", () => displayOpponent(computerHero));
 specialAbilityButton.addEventListener("click", playerSelectMove)
 specialAbilityButton.addEventListener("click", computerSelectMove)
 specialAbilityButton.addEventListener("click", calculatePlayerHealth)
+specialAbilityButton.addEventListener("click", calculateOpponentHealth)
 
 signatureMoveButton.addEventListener("click", playerSelectMove)
 signatureMoveButton.addEventListener("click", computerSelectMove)
 signatureMoveButton.addEventListener("click", calculatePlayerHealth)
+signatureMoveButton.addEventListener("click", calculateOpponentHealth)
 
-
-signatureMoveButton.addEventListener("click", () => displayMoveChoice(computerMove, playerMove, currentPlayerHealth))
-specialAbilityButton.addEventListener("click", () => displayMoveChoice(computerMove, playerMove, currentPlayerHealth))
+signatureMoveButton.addEventListener("click", () => displayMoveChoice(computerMove, playerMove, currentPlayerHealth, currentComputerDamage))
+specialAbilityButton.addEventListener("click", () => displayMoveChoice(computerMove, playerMove, currentPlayerHealth, currentComputerDamage))
