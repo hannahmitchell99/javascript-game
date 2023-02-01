@@ -14,6 +14,10 @@
   color: white;
 }
 
+.game-container__display {
+  border: 1px solid red;
+}
+
 img {
   transform: scale(0.5);
 }/*# sourceMappingURL=styles.css.map */
