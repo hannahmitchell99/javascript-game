@@ -1,52 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=VT323&display=swap");
 
-$font-heading: 'Permanent Marker', cursive;
-$font-main: 'Didact Gothic', sans-serif;
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+$font-heading: "VT323", monospace;
+$font-main: "Koulen", cursive;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header{
-    width: 100%;
-    text-align: center;
-    height: 10rem;
-    background-color: black;
-    font-family:$font-heading;
-    color:white;
+.header {
+  height: 10rem;
+  background-color: #ed542d;
+  font-family: $font-heading;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title title"
+    "subtitle subtitle subtitle";
+
+  &__title {
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    grid-area: subtitle;
+  }
 }
 
-.game-container__display{
-    border: 1px solid red
-}
+.pick-player {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 6px;
+  grid-template-areas:
+    "heading heading heading"
+    "hq storm ww"
+    "hulk spiderman wolverine"
+    "play play play";
 
-// .game-container{
-//     width: 100vw;
-//     display: grid;
+  &__heading {
+    grid-area: heading;
+    font-family: $font-heading;
+    justify-self: center; 
+    align-self: center; 
+  }
+  &__hq {
+    grid-area: hq;
+ 
+  }
+  &__storm {
+    grid-area: storm;
+ 
+  }
+  &__ww {
+    grid-area: ww;
+ 
+  }
+  &__hulk {
+    grid-area: hulk;
+  }
+  &__spiderman {
+    grid-area: spiderman;
     
-
-//     &__player-card{
-//         display: flex;
-//        flex-direction: column;
+  }
+  &__wolverine {
+    grid-area: wolverine;
     
-//        max-width: 200px;
-//     border-radius: 3px;
-//     overflow: hidden;
-        
-//     }
-
-//     &__display{
-//         grid-area: display;
-//     }
-
-//     &__opponent-card{
-//         grid-area: opp;
-//     }
-// }
-
-img{
-    transform: scale(0.5);
+  }
+  .play {
+    grid-area: play;
+  }
 }
 
+.superhero {
+  font-family: $font-main;
+  font-size: 14px;
+  color: #fff;
+  background-color: #e76f51;
+  padding: 2px;
+  border: solid #d62828 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-content: center;
+  flex-wrap: wrap;
+}
 
+.superhero:hover {
+  transform: translateY(-2px);
+  background-color: #d62828;
+  color: #ffffff;
+  border: solid 2px #ff0606;
+}
