@@ -82,7 +82,7 @@ $font-card: "Quicksand", sans-serif;
   }
 }
 .choose-move {
-  background-color: #b3dbef;
+  background-color: #d9effa;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -109,8 +109,8 @@ $font-card: "Quicksand", sans-serif;
 .game-container {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr 1fr; 
-  gap: 0px 0px; 
+  grid-template-rows: 1fr 1fr 1fr ; 
+  gap: 3px 0px; 
   grid-template-areas: 
     "player player opponent opponent"
     "player player opponent opponent"
@@ -157,37 +157,6 @@ $font-card: "Quicksand", sans-serif;
   }
 }
 
-// styling
-
-.opponent-abilities h4,
-.player-abilities h4 {
-  font-family: $font-heading;
-  color: #0077b6;
-}
-.opponent-abilities p,
-.player-abilities p {
-  font-family: $font-main;
-  color: #d60909;
-}
-.player-heading {
-  &__name {
-    font-family: $font-heading;
-    font-size: 1.5rem;
-  }
-}
-
-.game-display {
-  border: #0077b6 2px solid;
-}
-.game-display h2 {
-  font-family: $font-heading;
-  color: #0077b6;
-}
-.game-display p {
-  font-family: $font-main;
-  color: #d60909;
-}
-
 .game-container__opponent-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -220,6 +189,61 @@ $font-card: "Quicksand", sans-serif;
     font-size: 1.5rem;
   }
 }
+
+.new-game-container{
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "button"; 
+
+&__new-game {
+  
+  justify-self: center; 
+  align-self: center; 
+  grid-area: button; 
+}
+}
+
+// styling
+
+.opponent-abilities h4,
+.player-abilities h4 {
+  font-family: $font-heading;
+  color: #0077b6;
+  font-size: 75%;
+}
+.opponent-abilities p,
+.player-abilities p {
+  font-family: $font-main;
+  color: #d60909;
+  font-size: 75%;
+}
+
+
+.player-heading {
+  &__name {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+  }
+}
+
+.game-display {
+  font-size: 75%;
+  text-align: center;
+  background-color: #d9effa;
+}
+.game-display h2 {
+  font-family: $font-heading;
+  color: #0077b6;
+}
+.game-display p {
+  font-family: $font-main;
+  color: #d60909;
+}
+
+
 
 .superhero {
   font-family: $font-main;
@@ -293,4 +317,8 @@ $font-card: "Quicksand", sans-serif;
 .choose-move__signature:hover {
   transform: translateY(-2px);
   background-color: #f8832a;
+}
+
+.new-game-container{
+  background-color: #d9effa;
 }

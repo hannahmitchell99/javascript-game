@@ -70,7 +70,7 @@
 }
 
 .choose-move {
-  background-color: #b3dbef;
+  background-color: #d9effa;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -94,8 +94,8 @@
 .game-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px 0px;
   grid-template-areas: "player player opponent opponent" "player player opponent opponent" "player player opponent opponent";
 }
 .game-container__player-card {
@@ -132,37 +132,6 @@
   font-weight: 50;
 }
 
-.opponent-abilities h4,
-.player-abilities h4 {
-  font-family: "VT323", monospace;
-  color: #0077b6;
-}
-
-.opponent-abilities p,
-.player-abilities p {
-  font-family: "Koulen", cursive;
-  color: #d60909;
-}
-
-.player-heading__name {
-  font-family: "VT323", monospace;
-  font-size: 1.5rem;
-}
-
-.game-display {
-  border: #0077b6 2px solid;
-}
-
-.game-display h2 {
-  font-family: "VT323", monospace;
-  color: #0077b6;
-}
-
-.game-display p {
-  font-family: "Koulen", cursive;
-  color: #d60909;
-}
-
 .game-container__opponent-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -190,6 +159,54 @@
 .opponent-heading__name {
   font-family: "VT323", monospace;
   font-size: 1.5rem;
+}
+
+.new-game-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "button";
+}
+.new-game-container__new-game {
+  justify-self: center;
+  align-self: center;
+  grid-area: button;
+}
+
+.opponent-abilities h4,
+.player-abilities h4 {
+  font-family: "VT323", monospace;
+  color: #0077b6;
+  font-size: 75%;
+}
+
+.opponent-abilities p,
+.player-abilities p {
+  font-family: "Koulen", cursive;
+  color: #d60909;
+  font-size: 75%;
+}
+
+.player-heading__name {
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+}
+
+.game-display {
+  font-size: 75%;
+  text-align: center;
+  background-color: #d9effa;
+}
+
+.game-display h2 {
+  font-family: "VT323", monospace;
+  color: #0077b6;
+}
+
+.game-display p {
+  font-family: "Koulen", cursive;
+  color: #d60909;
 }
 
 .superhero {
@@ -263,4 +280,8 @@
 .choose-move__signature:hover {
   transform: translateY(-2px);
   background-color: #f8832a;
+}
+
+.new-game-container {
+  background-color: #d9effa;
 }/*# sourceMappingURL=styles.css.map */
