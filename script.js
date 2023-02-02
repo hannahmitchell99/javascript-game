@@ -1,7 +1,7 @@
 import superHeroArray from "./data/superheroes.js";
 
 // DOM variables
-const gameContainer = document.querySelector(".game-container");
+
 const playerCard = document.querySelector(".game-container__player-card");
 const oppCard = document.querySelector(".game-container__opponent-card");
 const gameDisplay = document.querySelector(".game-display");
@@ -10,7 +10,6 @@ const selectPlayerButtons = document.querySelectorAll(".superhero");
 const playButton = document.querySelector(".play");
 const specialAbilityButton = document.querySelector("#special-ability-button");
 const signatureMoveButton = document.querySelector("#signature-move-button");
-
 
 let userHero = "hello";
 let computerHero = "hi";
@@ -27,8 +26,8 @@ let currentComputerDamage = 0;
 const selectSuperhero = (event) => {
   for (let index = 0; index < superHeroArray.length; index++) {
     if (event.target.innerHTML === superHeroArray[index].name) {
-      console.log(superHeroArray[index]);
       userHero = superHeroArray[index];
+      superHeroArray.splice(index, 1);
       return userHero;
     }
   }
@@ -38,7 +37,6 @@ const selectSuperhero = (event) => {
 
 const selectOpponent = () => {
   const random = Math.floor(Math.random() * superHeroArray.length);
-  console.log(superHeroArray[random]);
   computerHero = superHeroArray[random];
   return computerHero;
 };
@@ -50,11 +48,9 @@ const selectOpponent = () => {
 const playerSelectMove = (event) => {
   if (event.target.innerHTML === "Special Ability!") {
     playerMove = userHero.specialAbility;
-    console.log(playerMove);
     return playerMove;
   } else if (event.target.innerHTML === "Signature Move!") {
     playerMove = userHero.signatureMove;
-    console.log(playerMove);
     return playerMove;
   }
 };
@@ -64,11 +60,9 @@ const computerSelectMove = () => {
   const random = Math.floor(Math.random() * 2);
   if (random === 0) {
     computerMove = computerHero.specialAbility;
-    console.log(computerMove);
     return computerMove;
   } else {
     computerMove = computerHero.signatureMove;
-    console.log(computerMove);
     return computerMove;
   }
 };
@@ -77,29 +71,20 @@ const computerSelectMove = () => {
 
 const calculatePlayerDamage = () => {
   if (computerMove === computerHero.specialAbility) {
-    let computerDamage = computerHero.specialAbilityDamage;
-    currentPlayerDamage -= computerDamage;
-    console.log(currentPlayerDamage);
+    currentPlayerDamage -= computerHero.specialAbilityDamage;
     return currentPlayerDamage;
   } else if (computerMove === computerHero.signatureMove) {
-    let computerDamage = computerHero.signatureMoveDamage;
-    currentPlayerDamage -= computerDamage;
-    console.log(currentPlayerDamage);
+    currentPlayerDamage -= computerHero.signatureMoveDamage;
     return currentPlayerDamage;
   }
 };
 
-
 const calculateComputerDamage = () => {
   if (playerMove === userHero.specialAbility) {
-    let userDamage = userHero.specialAbilityDamage;
-    currentComputerDamage -= userDamage;
-    console.log(currentComputerDamage);
+    currentComputerDamage -= userHero.specialAbilityDamage;
     return currentComputerDamage;
   } else if (playerMove === userHero.signatureMove) {
-    let userDamage = userHero.signatureMoveDamage;
-    currentComputerDamage -= userDamage;
-    console.log(currentComputerDamage);
+    currentComputerDamage -= userHero.signatureMoveDamage;
     return currentComputerDamage;
   }
 };
@@ -108,7 +93,7 @@ const calculateComputerDamage = () => {
 // display selected superhero
 
 const displaySelectedSuperhero = (superHeroObject) => {
-  const playerCardHTML = `<div class="player-heading">
+  playerCard.innerHTML = `<div class="player-heading">
        <h3 class="player-heading__name">${superHeroObject.name}</h3>
    </div>
    <img class="player-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
@@ -118,13 +103,12 @@ const displaySelectedSuperhero = (superHeroObject) => {
     <h4>Your signature move is: </h4> <p> ${superHeroObject.signatureMove}</p>
    </div>
 `;
-  playerCard.innerHTML = playerCardHTML;
 };
 
 // display opponent
 
 const displayOpponent = (superHeroObject) => {
-  const oppCardHTML = `<div class="opponent-heading">
+  oppCard.innerHTML = `<div class="opponent-heading">
        <h3 class="opponent-heading__name">${superHeroObject.name}</h3>
    </div>
    <img class="opponent-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
@@ -134,7 +118,6 @@ const displayOpponent = (superHeroObject) => {
        <h4>Their signature move is: </h4> <p> ${superHeroObject.signatureMove}</p>
    </div>
 `;
-  oppCard.innerHTML = oppCardHTML;
 };
 
 // display move choice, calculate and display health + winners
@@ -147,28 +130,23 @@ const displayMoveChoice = (
 ) => {
   let totalUserHealth = userHero.health + currentPlayerDamage;
   let totalOpponentHealth = computerHero.health + currentComputerDamage;
-  if ((currentPlayerDamage*(-1))>= userHero.health){
-    const displayHTML = `<h2>You Lost! Click new game to try again!</h2>`
-    gameDisplay.innerHTML = displayHTML;
-  } else if((currentComputerDamage*(-1))>= computerHero.health){
-    const displayHTML = `<h2>You Won! Click new game to defend your title!</h2>`
-    gameDisplay.innerHTML = displayHTML;
-  }else {
-    const displayHTML = `<h2>⚡You chose: </h2> <p> ${playerMove} </p>
+  if (currentPlayerDamage * -1 >= userHero.health) {
+    gameDisplay.innerHTML = `<h2>You Lost! Click new game to try again!</h2>`;
+  } else if (currentComputerDamage * -1 >= computerHero.health) {
+    gameDisplay.innerHTML = `<h2>You Won! Click new game to defend your title!</h2>`;
+  } else {
+    gameDisplay.innerHTML = `<h2>⚡You chose: </h2> <p> ${playerMove} </p>
     <h2>💥And your opponent chose:</h2><p> ${computerMove} </p>
     <h2>Your health is now </h2><p> ${totalUserHealth}!</p>
     <h2>Opponent health is </h2><p> ${totalOpponentHealth}!</p>`;
-    gameDisplay.innerHTML = displayHTML;
   }
-   
-  };
+};
 
 // refresh function
 
 const refreshPage = () => {
   window.location.reload();
-}
-
+};
 
 // Events
 
@@ -207,4 +185,4 @@ specialAbilityButton.addEventListener("click", () =>
   )
 );
 
-newGameButton.addEventListener('click', refreshPage)
+newGameButton.addEventListener("click", refreshPage);

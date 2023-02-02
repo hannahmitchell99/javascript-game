@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9effa;
+}
+
 .header {
   height: 10rem;
   background-color: #0077b6;
@@ -32,6 +38,8 @@
 
 .pick-player {
   background-color: #d9effa;
+  padding-bottom: 20px;
+  height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -72,6 +80,7 @@
 .choose-move {
   background-color: #d9effa;
   display: grid;
+  height: 20vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 6px;
@@ -224,6 +233,7 @@
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  justify-self: center;
 }
 
 .superhero:hover {
@@ -274,6 +284,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  justify-self: center;
 }
 
 .choose-move__special:hover,
@@ -284,4 +295,5 @@
 
 .new-game-container {
   background-color: #d9effa;
+  margin-top: 20px;
 }/*# sourceMappingURL=styles.css.map */
