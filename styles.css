@@ -105,6 +105,32 @@
   grid-area: button;
 }
 
+@media screen and (min-width: 1024px) {
+  .choose-move__special, .choose-move__signature, .new-game-container__new-game, .play {
+    max-width: 25%;
+    height: auto;
+  }
+  .game-container__opponent-card, .game-container__player-card {
+    width: 75%;
+    align-items: center;
+  }
+  .game-display {
+    height: auto;
+  }
+  .opponent-abilities, .player-abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .opponent-sprite, .player-sprite {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
 .header {
   height: 10rem;
   background-color: #0077b6;
