@@ -79,7 +79,7 @@ body {
 
 .choose-move {
   background-color: #d9effa;
-  display: grid;
+  display: none;
   height: 20vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
