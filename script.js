@@ -2,9 +2,11 @@ import superHeroArray from "./data/superheroes.js";
 
 // DOM variables
 
+const pickPlayer = document.querySelector(".pick-player");
 const playerCard = document.querySelector(".game-container__player-card");
 const oppCard = document.querySelector(".game-container__opponent-card");
 const gameDisplay = document.querySelector(".game-display");
+const chooseMove = document.querySelector(".buttons-move");
 const newGameButton = document.querySelector("#new-game");
 const selectPlayerButtons = document.querySelectorAll(".superhero");
 const playButton = document.querySelector(".play");
@@ -119,7 +121,15 @@ const displayOpponent = (superHeroObject) => {
    </div>
 `;
 };
+// display moves
 
+const displayMoveOptions = () => {
+  chooseMove.innerHTML = ` <div class="choose-move">
+  <h3 class="choose-move__heading">Choose your move here🦸‍♀️</h3>
+  <button id="special-ability-button" class="choose-move__special">Special Ability!</button>
+  <button id="signature-move-button" class="choose-move__signature">Signature Move!</button>
+</div>`;
+};
 // display move choice, calculate and display health + winners
 
 const displayMoveChoice = (
@@ -141,6 +151,11 @@ const displayMoveChoice = (
     <h2>Opponent health is </h2><p> ${totalOpponentHealth}!</p>`;
   }
 };
+//hiding items
+
+const toggleHidden = () => {
+  pickPlayer.style.display = "none";
+};
 
 // refresh function
 
@@ -157,6 +172,8 @@ selectPlayerButtons.forEach((selectPlayerButton) => {
 
 playButton.addEventListener("click", () => displaySelectedSuperhero(userHero));
 playButton.addEventListener("click", () => displayOpponent(computerHero));
+playButton.addEventListener("click", toggleHidden);
+playButton.addEventListener("click", displayMoveOptions);
 
 specialAbilityButton.addEventListener("click", playerSelectMove);
 specialAbilityButton.addEventListener("click", computerSelectMove);
