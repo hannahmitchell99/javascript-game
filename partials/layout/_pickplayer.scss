@@ -1,0 +1,74 @@
+.header {
+  height: 10rem;
+  background-color: #0077b6;
+  font-family: $font-heading;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title title"
+    "subtitle subtitle subtitle";
+
+  &__title {
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    grid-area: subtitle;
+  }
+}
+
+.pick-player {
+  background-color: #d9effa;
+  padding-bottom: 20px;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 7px;
+  grid-template-areas:
+    "heading heading heading"
+    "hq storm ww"
+    "hulk spiderman wolverine"
+    "play play play";
+
+  &__heading {
+    grid-area: heading;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  &__hq {
+    grid-area: hq;
+  }
+  &__storm {
+    grid-area: storm;
+  }
+  &__ww {
+    grid-area: ww;
+  }
+  &__hulk {
+    grid-area: hulk;
+  }
+  &__spiderman {
+    grid-area: spiderman;
+  }
+  &__wolverine {
+    grid-area: wolverine;
+  }
+  .play {
+    grid-area: play;
+    justify-self: center;
+    align-self: center;
+  }
+}

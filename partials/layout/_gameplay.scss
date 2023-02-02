@@ -1,0 +1,121 @@
+.choose-move {
+  background-color: #d9effa;
+  display: none;
+  height: 20vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  grid-template-areas:
+    "heading heading heading heading"
+    "special-ability special-ability signature-move signature-move";
+
+  &__heading {
+    grid-area: heading;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  &__special {
+    grid-area: special-ability;
+  }
+  &__signature {
+    grid-area: signature-move;
+  }
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px 0px;
+  grid-template-areas:
+    "player player opponent opponent"
+    "player player opponent opponent"
+    "player player opponent opponent";
+
+  &__player-card {
+    grid-area: player;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__opponent-card {
+    grid-area: opponent;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+.game-container__player-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas:
+    "heading heading heading"
+    "sprite sprite sprite"
+    "abilities abilities abilities";
+  .player-heading {
+    justify-self: center;
+    grid-area: heading;
+  }
+  .player-sprite {
+    grid-area: sprite;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 155px;
+    min-height: 155px;
+    justify-self: center;
+  }
+  .player-abilities {
+    grid-area: abilities;
+    font-weight: 50;
+  }
+}
+
+.game-container__opponent-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas:
+    "heading heading heading"
+    "sprite sprite sprite"
+    "abilities abilities abilities";
+  .opponent-heading {
+    justify-self: center;
+    grid-area: heading;
+  }
+  .opponent-sprite {
+    grid-area: sprite;
+    justify-self: center;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 155px;
+    min-height: 155px;
+  }
+  .opponent-abilities {
+    grid-area: abilities;
+    font-family: $font-heading;
+    font-weight: 50;
+  }
+}
+.opponent-heading {
+  &__name {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+  }
+}
+
+.new-game-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "button";
+
+  &__new-game {
+    justify-self: center;
+    align-self: center;
+    grid-area: button;
+  }
+}

@@ -1,0 +1,63 @@
+.opponent-abilities h4,
+.player-abilities h4 {
+  font-family: $font-heading;
+  color: #0077b6;
+  font-size: 75%;
+}
+.opponent-abilities p,
+.player-abilities p {
+  font-family: $font-main;
+  color: #d60909;
+  font-size: 75%;
+}
+
+.player-heading {
+  &__name {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+  }
+}
+
+.game-display {
+  font-size: 75%;
+  text-align: center;
+  background-color: #d9effa;
+}
+.game-display h2 {
+  font-family: $font-heading;
+  color: #0077b6;
+}
+.game-display p {
+  font-family: $font-main;
+  color: #d60909;
+}
+
+.choose-move__special,
+.choose-move__signature {
+  font-family: $font-main;
+  font-size: 14px;
+  color: #fff;
+  padding: 2px;
+  width: 60%;
+  background-color: #ff9a4d;
+  border: solid #e76f51 2px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.choose-move__special:hover,
+.choose-move__signature:hover {
+  transform: translateY(-2px);
+  background-color: #f8832a;
+}
+
+.new-game-container {
+  background-color: #d9effa;
+  margin-top: 20px;
+}
