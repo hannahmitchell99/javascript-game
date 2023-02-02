@@ -113,9 +113,9 @@ const displaySelectedSuperhero = (superHeroObject) => {
    </div>
    <img class="player-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
    <div class="player-abilities">
-       <h4>Your starting health is: ${superHeroObject.health}</h4>
-       <h4>Your special ability is: ${superHeroObject.specialAbility}</h4>
-       <h4>Your signature move is: ${superHeroObject.signatureMove}</h4>
+    <h4>Your starting health is: </h4> <p> ${superHeroObject.health} </p>
+    <h4>Your special ability is: </h4> <p>${superHeroObject.specialAbility} </p>
+    <h4>Your signature move is: </h4> <p> ${superHeroObject.signatureMove}</p>
    </div>
 `;
   playerCard.innerHTML = playerCardHTML;
@@ -129,9 +129,9 @@ const displayOpponent = (superHeroObject) => {
    </div>
    <img class="opponent-sprite" src="${superHeroObject.sprite}" alt="${superHeroObject.name} sprite">
    <div class="opponent-abilities">
-       <h4>Their starting health is: ${superHeroObject.health}</h4>
-       <h4>Their special ability is: ${superHeroObject.specialAbility}</h4>
-       <h4>Their signature move is: ${superHeroObject.signatureMove}</h4>
+       <h4>Their starting health is: </h4> <p> ${superHeroObject.health} </p>
+       <h4>Their special ability is: </h4> <p>${superHeroObject.specialAbility} </p>
+       <h4>Their signature move is: </h4> <p> ${superHeroObject.signatureMove}</p>
    </div>
 `;
   oppCard.innerHTML = oppCardHTML;
@@ -154,10 +154,10 @@ const displayMoveChoice = (
     const displayHTML = `<h2>You Won! Click new game to defend your title!</h2>`
     gameDisplay.innerHTML = displayHTML;
   }else {
-    const displayHTML = `<h2>You Chose: ${playerMove} </h2>
-    <h2>Opponent Chose: ${computerMove} </h2>
-    <h2> Your health is ${totalUserHealth}!</h2>
-    <h2>Opponent health is ${totalOpponentHealth}!</h2>`;
+    const displayHTML = `<h2>⚡You chose: </h2> <p> ${playerMove} </p>
+    <h2>💥And your opponent chose:</h2><p> ${computerMove} </p>
+    <h2>Your health is now </h2><p> ${totalUserHealth}!</p>
+    <h2>Opponent health is </h2><p> ${totalOpponentHealth}!</p>`;
     gameDisplay.innerHTML = displayHTML;
   }
    

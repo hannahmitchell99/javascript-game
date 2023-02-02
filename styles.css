@@ -110,13 +110,36 @@
 }
 .game-container__player-card .player-abilities {
   grid-area: abilities;
-  font-family: "VT323", monospace;
   font-weight: 50;
+}
+
+.opponent-abilities h4, .player-abilities h4 {
+  font-family: "VT323", monospace;
+  color: #0077b6;
+}
+
+.opponent-abilities p, .player-abilities p {
+  font-family: "Koulen", cursive;
+  color: #d60909;
 }
 
 .player-heading__name {
   font-family: "VT323", monospace;
   font-size: 1.5rem;
+}
+
+.game-container__display {
+  border: #0077b6 2px solid;
+}
+
+.game-container__display h2 {
+  font-family: "VT323", monospace;
+  color: #0077b6;
+}
+
+.game-container__display p {
+  font-family: "Koulen", cursive;
+  color: #d60909;
 }
 
 .game-container__opponent-card {
