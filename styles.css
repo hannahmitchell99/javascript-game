@@ -91,8 +91,25 @@
   grid-area: signature-move;
 }
 
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "player player opponent opponent" "player player opponent opponent" "player player opponent opponent";
+}
 .game-container__player-card {
-  width: 50%;
+  grid-area: player;
+  justify-self: center;
+  align-self: center;
+}
+.game-container__opponent-card {
+  grid-area: opponent;
+  justify-self: center;
+  align-self: center;
+}
+
+.game-container__player-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.25fr 1fr 0.25fr;
@@ -104,21 +121,25 @@
 }
 .game-container__player-card .player-sprite {
   grid-area: sprite;
-  min-width: 60%;
-  max-width: 60%;
-  height: auto;
+  min-width: 120px;
+  max-width: 120px;
+  max-height: 155px;
+  min-height: 155px;
+  justify-self: center;
 }
 .game-container__player-card .player-abilities {
   grid-area: abilities;
   font-weight: 50;
 }
 
-.opponent-abilities h4, .player-abilities h4 {
+.opponent-abilities h4,
+.player-abilities h4 {
   font-family: "VT323", monospace;
   color: #0077b6;
 }
 
-.opponent-abilities p, .player-abilities p {
+.opponent-abilities p,
+.player-abilities p {
   font-family: "Koulen", cursive;
   color: #d60909;
 }
@@ -128,22 +149,21 @@
   font-size: 1.5rem;
 }
 
-.game-container__display {
+.game-display {
   border: #0077b6 2px solid;
 }
 
-.game-container__display h2 {
+.game-display h2 {
   font-family: "VT323", monospace;
   color: #0077b6;
 }
 
-.game-container__display p {
+.game-display p {
   font-family: "Koulen", cursive;
   color: #d60909;
 }
 
 .game-container__opponent-card {
-  width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.25fr 1fr 0.25fr;
@@ -155,9 +175,11 @@
 }
 .game-container__opponent-card .opponent-sprite {
   grid-area: sprite;
-  min-width: 60%;
-  max-width: 60%;
-  height: auto;
+  justify-self: center;
+  min-width: 120px;
+  max-width: 120px;
+  max-height: 155px;
+  min-height: 155px;
 }
 .game-container__opponent-card .opponent-abilities {
   grid-area: abilities;
@@ -194,7 +216,8 @@
   border: solid 2px #ff0606;
 }
 
-.play {
+.play,
+#new-game {
   font-family: "Koulen", cursive;
   font-weight: 500;
   font-size: 14px;
@@ -208,9 +231,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
-.play:hover {
+.play:hover,
+#new-game:hover {
   padding: 10px 24px;
   transform: translateY(-2px);
   background-color: rgba(0, 149, 199, 0.5921568627);

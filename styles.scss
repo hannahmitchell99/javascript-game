@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand&family=VT323&display=swap");
 
 $font-heading: "VT323", monospace;
 $font-main: "Koulen", cursive;
-$font-card: 'Quicksand', sans-serif;
+$font-card: "Quicksand", sans-serif;
 * {
   margin: 0;
   padding: 0;
@@ -106,9 +106,32 @@ $font-card: 'Quicksand', sans-serif;
   }
 }
 
+.game-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "player player opponent opponent"
+    "player player opponent opponent"
+    "player player opponent opponent"; 
+
+  &__player-card {
+    grid-area: player;
+    justify-self: center; 
+    align-self: center; 
+  }
+
+
+  &__opponent-card {
+    grid-area: opponent;
+    justify-self: center; 
+    align-self: center; 
+  }
+
+}
+
 .game-container__player-card {
-  width:50%;
-//   border: #d62828 2px solid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.25fr 1fr 0.25fr;
@@ -122,9 +145,11 @@ $font-card: 'Quicksand', sans-serif;
   }
   .player-sprite {
     grid-area: sprite;
-    min-width: 60%;
-    max-width: 60%;
-    height:auto;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 155px;
+    min-height: 155px;
+    justify-self: center;
   }
   .player-abilities {
     grid-area: abilities;
@@ -132,66 +157,68 @@ $font-card: 'Quicksand', sans-serif;
   }
 }
 
-.opponent-abilities h4, .player-abilities h4{
+// styling
+
+.opponent-abilities h4,
+.player-abilities h4 {
   font-family: $font-heading;
   color: #0077b6;
 }
-.opponent-abilities p, .player-abilities p{
+.opponent-abilities p,
+.player-abilities p {
   font-family: $font-main;
   color: #d60909;
 }
-.player-heading{
-    &__name{
-        font-family: $font-heading;
-        font-size: 1.5rem;
-    }
+.player-heading {
+  &__name {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+  }
 }
 
-
-.game-container__display{
-    border:#0077b6 2px solid
-    
+.game-display {
+  border: #0077b6 2px solid;
 }
-.game-container__display h2{
+.game-display h2 {
   font-family: $font-heading;
   color: #0077b6;
 }
-.game-container__display p{
+.game-display p {
   font-family: $font-main;
   color: #d60909;
 }
 
-.game-container__opponent-card{
-    width:50%;
-    //   border: #d62828 2px solid;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.25fr 1fr 0.25fr;
-      grid-template-areas:
-        "heading heading heading"
-        "sprite sprite sprite"
-        "abilities abilities abilities";
-      .opponent-heading {
-        justify-self: center;
-        grid-area: heading;
-      }
-      .opponent-sprite {
-        grid-area: sprite;
-        min-width: 60%;
-        max-width: 60%;
-        height:auto;
-      }
-      .opponent-abilities {
-        grid-area: abilities;
-        font-family: $font-heading;
-        font-weight: 50;
-      }
-    }
-    .opponent-heading{
-        &__name{
-            font-family: $font-heading;
-            font-size: 1.5rem;
-        }
+.game-container__opponent-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas:
+    "heading heading heading"
+    "sprite sprite sprite"
+    "abilities abilities abilities";
+  .opponent-heading {
+    justify-self: center;
+    grid-area: heading;
+  }
+  .opponent-sprite {
+    grid-area: sprite;
+    justify-self: center;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 155px;
+    min-height: 155px;
+  }
+  .opponent-abilities {
+    grid-area: abilities;
+    font-family: $font-heading;
+    font-weight: 50;
+  }
+}
+.opponent-heading {
+  &__name {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+  }
 }
 
 .superhero {
@@ -218,7 +245,8 @@ $font-card: 'Quicksand', sans-serif;
   border: solid 2px #ff0606;
 }
 
-.play {
+.play,
+#new-game {
   font-family: $font-main;
   font-weight: 500;
   font-size: 14px;
@@ -232,9 +260,11 @@ $font-card: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
-.play:hover {
+.play:hover,
+#new-game:hover {
   padding: 10px 24px;
   transform: translateY(-2px);
   background-color: #0095c797;
