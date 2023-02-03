@@ -25,7 +25,7 @@ The planning process began on paper - writing out *how I wanted it to look, and 
 ---
 
 ### This was my initial plan and my steps to guide me throughout ✏️
-![IMG_8097](https://user-images.githubusercontent.com/119801701/216599873-575082e4-e6a2-4205-a1b0-af17793cc209.jpg =250x250))
+![IMG_8097](https://user-images.githubusercontent.com/119801701/216599873-575082e4-e6a2-4205-a1b0-af17793cc209.jpg =250x250)
 
 ![IMG_8098](https://user-images.githubusercontent.com/119801701/216599962-81ca7686-8134-44a3-81ed-c303e225d2ef.jpg)
 
