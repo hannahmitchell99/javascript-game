@@ -72,12 +72,15 @@ const computerSelectMove = () => {
 
 // game functions
 
+// to make it more competitive, the computer can have an added random extra damage 
+
 const calculatePlayerDamage = () => {
   if (computerMove === computerHero.specialAbility) {
-    currentPlayerDamage -= computerHero.specialAbilityDamage;
+    currentPlayerDamage -= computerHero.specialAbilityDamage + Math.floor(Math.random() * 20);
+    console.log(currentPlayerDamage)
     return currentPlayerDamage;
   } else if (computerMove === computerHero.signatureMove) {
-    currentPlayerDamage -= computerHero.signatureMoveDamage;
+    currentPlayerDamage -= computerHero.signatureMoveDamage + Math.floor(Math.random() * 5);
     return currentPlayerDamage;
   }
 };
