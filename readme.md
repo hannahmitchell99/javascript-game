@@ -16,4 +16,5 @@ This game allows the user to choose one of six superheros. Of the leftovers, the
 ---
 ### Let's see it in action!
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/119801701/216597241-2171b1e1-5486-4449-8371-1dadf6d499e4.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/119801701/216597995-5e2a79da-9537-4cba-b8b9-5ec121af49e7.gif)
+
