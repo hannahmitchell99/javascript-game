@@ -1,7 +1,7 @@
 export const superHeroArray = [
     {
         name: "Harley Quinn",
-        health: 2000,
+        health: 2050,
         sprite: "./assets/harleysprites.png",
         specialAbility: "an explosive up her sleeve",
         specialAbilityDamage: 300,
@@ -10,25 +10,25 @@ export const superHeroArray = [
     },
     {
         name: "Storm",
-        health: 1900,
+        health: 2100,
         sprite: "./assets/stormsprite.png",
         specialAbility: "here comes a thunderstorm!",
-        specialAbilityDamage: 400,
+        specialAbilityDamage: 275,
         signatureMove: "wind whiplash",
-        signatureMoveDamage: 150
+        signatureMoveDamage: 125
     },
     {
         name: "Wonder Woman",
-        health: 2500,
+        health: 2200,
         sprite: "./assets/wonderwomansprites-removebg-preview.png",
         specialAbility: "whack with the lasso of truth",
-        specialAbilityDamage: 400,
+        specialAbilityDamage: 200,
         signatureMove: "super fighting stamina",
-        signatureMoveDamage: 150
+        signatureMoveDamage: 100
     },
     {
         name: "Spider Man",
-        health: 1900,
+        health: 1980,
         sprite: "./assets/spidermansprite.png",
         specialAbility: "spidey senses are tingling...",
         specialAbilityDamage: 400,
@@ -37,21 +37,21 @@ export const superHeroArray = [
     },
     {
         name: "The Hulk",
-        health: 2500,
+        health: 2000,
         sprite: "./assets/hulksprite-removebg-preview.png",
         specialAbility: "HULK EXTRA ANGRY SMASH!",
         specialAbilityDamage: 400,
         signatureMove: "HULK SMASH!",
-        signatureMoveDamage: 200
+        signatureMoveDamage: 100
     },
     {
         name: "Wolverine",
-        health: 3000,
+        health: 2200,
         sprite: "./assets/wolverinesprite.png",
         specialAbility: "superhuman speed!",
-        specialAbilityDamage: 400,
+        specialAbilityDamage: 250,
         signatureMove: "here comes a claw!",
-        signatureMoveDamage: 150
+        signatureMoveDamage: 50
     },  
 ]
 
