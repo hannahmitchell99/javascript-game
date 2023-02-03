@@ -9,7 +9,11 @@ This game allows the user to choose one of six superheros. Of the leftovers, the
 ### These moves could be one of the following:
 
 - A signature move
-- A special ability
+- A special ability (which is more powerful)
+
+**But there's a catch....**
+
+Because the player may over-use the special ability function, using special ability may result in less damage to the opponent than intended. Because the opponent may have more of an even approach to moves, their use of special ability packs even more of a punch! 💥
 
 ### This continues until the first hero's health is depleted. 😪
 
