@@ -76,18 +76,18 @@ const computerSelectMove = () => {
 
 const calculatePlayerDamage = () => {
   if (computerMove === computerHero.specialAbility) {
-    currentPlayerDamage -= computerHero.specialAbilityDamage + Math.floor(Math.random() * 20);
-    console.log(currentPlayerDamage)
+    currentPlayerDamage -= (computerHero.specialAbilityDamage + Math.floor(Math.random() * 250));
     return currentPlayerDamage;
   } else if (computerMove === computerHero.signatureMove) {
-    currentPlayerDamage -= computerHero.signatureMoveDamage + Math.floor(Math.random() * 5);
+    currentPlayerDamage -= computerHero.signatureMoveDamage;
     return currentPlayerDamage;
   }
 };
 
 const calculateComputerDamage = () => {
   if (playerMove === userHero.specialAbility) {
-    currentComputerDamage -= userHero.specialAbilityDamage;
+    currentComputerDamage -= (userHero.specialAbilityDamage - Math.floor(Math.random() * 100))
+    console.log(currentComputerDamage);
     return currentComputerDamage;
   } else if (playerMove === userHero.signatureMove) {
     currentComputerDamage -= userHero.signatureMoveDamage;
