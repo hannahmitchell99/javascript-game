@@ -1,5 +1,5 @@
 import superHeroArray from "./data/superheroes.js";
-import confetti from "../node_modules/canvas-confetti/dist/confetti.module.mjs"
+// import confetti from "../node_modules/canvas-confetti/dist/confetti.module.mjs"
 
 // DOM variables
 
@@ -145,7 +145,7 @@ const displayMoveChoice = (
     gameDisplay.innerHTML = `<h2>You Lost! Click new game to try again!</h2>`;
   } else if (currentComputerDamage * -1 >= computerHero.health) {
     gameDisplay.innerHTML = `<h2>You Won! Click new game to defend your title!</h2>`;
-    confetti();
+    // confetti();
     
   } else {
     gameDisplay.innerHTML = `<h2>⚡You chose: </h2> <p> ${playerMove} </p>
